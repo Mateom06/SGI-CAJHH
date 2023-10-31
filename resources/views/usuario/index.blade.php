@@ -3,8 +3,11 @@
 <div class="row">
     <div class="col-md-9">
         <a href="{{url('usuario/create')}}" class="pull-right">
-            <button class="btn btn-success">Crear Usuario</button> </a>
-</div></div>
+            <button class="btn btn-success">Crear Usuario</button> </a></div></div>
+
+
+ 
+<p>{{ Auth::user()->name }}</p>          
 <div class="row">
         <div class="table-responsive">
     <table class="table table-striped table-hover">

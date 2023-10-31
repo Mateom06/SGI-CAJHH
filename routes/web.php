@@ -34,6 +34,8 @@ Route::resource('inventario', 'App\Http\Controllers\InventarioController');
 Route::resource('usuario', 'App\Http\Controllers\UsuarioController');
 Route::get('imprimirpedidos','App\http\Controllers\PdfController@imprimirpedidos')->name('imprimirpedidos');
 Route::get('imprimirsedes','App\http\Controllers\PdfController@imprimirsedes')->name('imprimirsedes');
+
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 Auth::routes();
 
 Route::get('/home', function () {

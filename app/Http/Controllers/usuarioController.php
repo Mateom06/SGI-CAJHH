@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\usuario;
 use Illuminate\Support\Facades\Redirect;
 
+use App\Http\Request\UsuarioFormRequest;
+
 class UsuarioController extends Controller
 {
     /**
@@ -13,6 +15,12 @@ class UsuarioController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct(){
+        $this->middleware('auth');
+
+    }
+
     public function index()
         {
             $usuario=Usuario::orderBy('id','ASC')->paginate(10);
@@ -25,8 +33,9 @@ class UsuarioController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
+        $request->user()->authorizeRoles('admin');
         return view ('usuario.create');
     }
 
@@ -36,7 +45,7 @@ class UsuarioController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UsuarioFormRequest $request)
     {
         $usuarios=new Usuario;
         $usuarios->documento_identidad=$request->get('documento_identidad');
