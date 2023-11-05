@@ -22,7 +22,7 @@
     <div class="col-lg-4 col-md-9 col-sm-6 col-xs-12">
         <div class="form-group">
             <label for="documento_identidad">Numero Documento</label>
-            <input type="number" name="documento_identidad"
+            <input type="number" name="documento_identidad" 
 id="documento_identidad" class="form-control"
                 placeholder="Digite el número Documento">
         </div>

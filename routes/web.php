@@ -18,7 +18,7 @@ use App\Http\Controllers\PdfController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('/login');
 });
 
 

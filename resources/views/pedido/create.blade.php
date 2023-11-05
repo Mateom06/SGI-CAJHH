@@ -29,14 +29,14 @@
 <div class="col-lg-4 col-md-9 col-sm-6 col-xs-12">
 <div class="form-group">
     <label for="fechaPedido">Fecha del Pedido</label>
-<input type="text" name="fechaPedido" id="fechaPedido" class="form-control"
+<input type="date" name="fechaPedido" id="fechaPedido" class="form-control"
 placeholder="Fecha del Pedido">
 </div>
 </div>
 <div class="col-lg-4 col-md-9 col-sm-6 col-xs-12">
 <div class="form-group">
 <label for="fechaEntrega">Fecha de Entrega</label>
-<input type="text" name="fechaEntrega" id="fechaEntrega" class="form-control"
+<input type="date" name="fechaEntrega" id="fechaEntrega" class="form-control"
 placeholder="Fecha de Entrega">
 </div>
 </div>

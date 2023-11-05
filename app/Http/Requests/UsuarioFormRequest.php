@@ -24,7 +24,7 @@ class UsuarioFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'documento_identidad' => 'required', 'nombre' => 'required',
+            'documento_identidad' => 'required', 'nombres' => 'required',
         ];
     }
 
@@ -32,7 +32,7 @@ class UsuarioFormRequest extends FormRequest
     {
     return [
         'documento_identidad.required' => 'El documento es un campo requerido',
-        'nombre.required' => 'El nombre debe ser un campo requerido',
+        'nombres.required' => 'El nombre debe ser un campo requerido',
        
     ];
     }

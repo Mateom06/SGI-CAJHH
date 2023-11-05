@@ -53,14 +53,14 @@
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-sans-serif: cursive;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
-  --bs-body-color: #212529;
+  --bs-body-color: #101213;
   --bs-body-bg: #fff;
 }
 
@@ -86,8 +86,9 @@ body {
   text-align: var(--bs-body-text-align);
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgba(7, 48, 94, 0.87);
 }
+
 
 hr {
   margin: 1rem 0;
@@ -299,6 +300,7 @@ figure {
 img,
 svg {
   vertical-align: middle;
+  color: #fff;
 }
 
 table {
@@ -4587,6 +4589,7 @@ textarea.form-control-lg {
 }
 .card-header:first-child {
   border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+  background-color: yellow;
 }
 
 .card-footer {
@@ -11422,6 +11425,7 @@ body {
   padding-left: 0;
   height: 56px;
   z-index: 1039;
+  background-color: #06357a;
 }
 .sb-topnav .navbar-brand {
   width: 225px;
@@ -11442,6 +11446,7 @@ body {
 }
 .sb-sidenav .sb-sidenav-menu {
   flex-grow: 1;
+  background-color: #06357a;
 }
 .sb-sidenav .sb-sidenav-menu .nav {
   flex-direction: column;
@@ -11459,6 +11464,8 @@ body {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   position: relative;
+  color: #fff;
+  font-family: cursive;
 }
 .sb-sidenav .sb-sidenav-menu .nav .nav-link .sb-nav-link-icon {
   font-size: 0.9rem;

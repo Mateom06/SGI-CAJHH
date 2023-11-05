@@ -11,10 +11,12 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    <!--link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">-->
 
+    <!--styles-->
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}" />
     <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <!--@vite(['resources/sass/app.scss', 'resources/js/app.js'])-->
 </head>
 <body>
     <div id="app">

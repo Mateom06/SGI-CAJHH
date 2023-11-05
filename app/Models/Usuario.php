@@ -9,7 +9,7 @@ class usuario extends Model
 {
     use HasFactory;
     public $timestamps = false;
-    protected $table = 'usuario';
+    protected $table = 'usuarios';
     protected $fillable = ['documento_identidad','nombres','apellidos','correo','telefono']; 
      
 }

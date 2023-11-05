@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\usuario;
+use App\Models\Usuario;
 use Illuminate\Support\Facades\Redirect;
 
-use App\Http\Request\UsuarioFormRequest;
+use App\Http\Requests\UsuarioFormRequest;
 
 class UsuarioController extends Controller
 {
@@ -47,6 +47,7 @@ class UsuarioController extends Controller
      */
     public function store(UsuarioFormRequest $request)
     {
+
         $usuarios=new Usuario;
         $usuarios->documento_identidad=$request->get('documento_identidad');
         $usuarios->nombres=$request->get('nombres');
