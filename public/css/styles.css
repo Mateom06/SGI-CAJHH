@@ -2821,6 +2821,7 @@ textarea.form-control-lg {
   margin-left: -1px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+  background-color: orange;
 }
 
 .valid-feedback {
@@ -3108,7 +3109,7 @@ textarea.form-control-lg {
 
 .btn-success {
   color: #fff;
-  background-color: #198754;
+  background-color: #873319;
   border-color: #198754;
 }
 .btn-success:hover {
@@ -3955,6 +3956,7 @@ textarea.form-control-lg {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  
 }
 
 .nav-link {
@@ -7392,6 +7394,7 @@ textarea.form-control-lg {
 
 .mb-4 {
   margin-bottom: 1.5rem !important;
+  background-color: floralwhite;
 }
 
 .mb-5 {
@@ -11368,6 +11371,7 @@ body {
   #layoutSidenav #layoutSidenav_content {
     margin-left: 0;
     transition: margin 0.15s ease-in-out;
+    background-color: blanchedalmond;
   }
 
   .sb-sidenav-toggled #layoutSidenav #layoutSidenav_nav {
@@ -11425,7 +11429,7 @@ body {
   padding-left: 0;
   height: 56px;
   z-index: 1039;
-  background-color: #06357a;
+  background-color: red;
 }
 .sb-topnav .navbar-brand {
   width: 225px;
@@ -11446,7 +11450,7 @@ body {
 }
 .sb-sidenav .sb-sidenav-menu {
   flex-grow: 1;
-  background-color: #06357a;
+  background-color: orange;
 }
 .sb-sidenav .sb-sidenav-menu .nav {
   flex-direction: column;
@@ -11464,7 +11468,7 @@ body {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   position: relative;
-  color: #fff;
+  color: lightyellow;
   font-family: cursive;
 }
 .sb-sidenav .sb-sidenav-menu .nav .nav-link .sb-nav-link-icon {
@@ -11513,7 +11517,7 @@ body {
   color: #fff;
 }
 .sb-sidenav-dark .sb-sidenav-footer {
-  background-color: #343a40;
+  background-color: orangered;
 }
 
 .sb-sidenav-light {
@@ -11705,4 +11709,12 @@ body {
   width: 20px !important;
   font-size: 0.75rem;
   border-radius: 0.25rem !important;
+}
+
+.edit{
+  color: orange;
+}
+
+.delete{
+  color: red;
 }
