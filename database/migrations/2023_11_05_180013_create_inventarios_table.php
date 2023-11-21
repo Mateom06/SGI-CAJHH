@@ -16,11 +16,14 @@ return new class extends Migration
         Schema::create('inventarios', function (Blueprint $table) {
             $table->id();
             $table->string('serial');
+            $table->unsignedBigInteger('idTipoActivo');
+                $table->foreing('idTipoActivo')>references('id')->on('TipoActivo');
             $table->string('modelo');
             $table->string('marca');
             $table->string('valor');
             $table->date('fechaAdquisicion');
             $table->date('fechaSalida');
+            $table->string('idEstadoActivo');
             $table->timestamps();
         });
     }

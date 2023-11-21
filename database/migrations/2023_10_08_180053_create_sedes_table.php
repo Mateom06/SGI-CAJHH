@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
 
             $table->string('Nombre');
+            $table->string('idColegio');
             $table->string('Colegio');
             $table->string('Direccion');
             $table->string('Correo');

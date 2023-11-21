@@ -56,7 +56,7 @@
   --bs-font-sans-serif: cursive;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  --bs-body-font-family: var(--bs-font-sans-serif);
+  --bs-body-font-family: 'Source Sans Pro', sans-serif !important;
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
@@ -156,6 +156,7 @@ h6, .h6 {
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+  margin: 1rem;
 }
 
 abbr[title],
@@ -212,6 +213,7 @@ strong {
 
 small, .small {
   font-size: 0.875em;
+  color: #3030305e;
 }
 
 mark, .mark {
@@ -300,7 +302,7 @@ figure {
 img,
 svg {
   vertical-align: middle;
-  color: #fff;
+  color: #ffd867;
 }
 
 table {
@@ -2125,6 +2127,7 @@ progress {
 .table-responsive, .dataTable-wrapper .dataTable-container {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  margin: 1rem;
 }
 
 @media (max-width: 575.98px) {
@@ -2811,6 +2814,7 @@ textarea.form-control-lg {
 .input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n+3) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+  height: 24px;
 }
 .input-group.has-validation > :nth-last-child(n+3):not(.dropdown-toggle):not(.dropdown-menu),
 .input-group.has-validation > .dropdown-toggle:nth-last-child(n+4) {
@@ -2821,7 +2825,9 @@ textarea.form-control-lg {
   margin-left: -1px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  background-color: orange;
+  background-color: #fff1f1;
+  height: 24px;
+    padding: 1px;
 }
 
 .valid-feedback {
@@ -3109,13 +3115,14 @@ textarea.form-control-lg {
 
 .btn-success {
   color: #fff;
-  background-color: #873319;
-  border-color: #198754;
+  background-color: #ff2648;
+  border: none;
+  margin: 10px;
 }
 .btn-success:hover {
   color: #fff;
-  background-color: #157347;
-  border-color: #146c43;
+  background-color: #ff95a5;
+  border: none;
 }
 .btn-check:focus + .btn-success, .btn-success:focus {
   color: #fff;
@@ -7394,7 +7401,7 @@ textarea.form-control-lg {
 
 .mb-4 {
   margin-bottom: 1.5rem !important;
-  background-color: floralwhite;
+  background-color: white;
 }
 
 .mb-5 {
@@ -11371,7 +11378,7 @@ body {
   #layoutSidenav #layoutSidenav_content {
     margin-left: 0;
     transition: margin 0.15s ease-in-out;
-    background-color: blanchedalmond;
+    background-color: rgba(232,232,232,0.32);
   }
 
   .sb-sidenav-toggled #layoutSidenav #layoutSidenav_nav {
@@ -11427,9 +11434,10 @@ body {
 
 .sb-topnav {
   padding-left: 0;
-  height: 56px;
+  height: 42px;
   z-index: 1039;
-  background-color: red;
+  background-color: #af051f;
+  box-shadow: 0px 10px 19px -3px rgba(0,0,0,0.1);
 }
 .sb-topnav .navbar-brand {
   width: 225px;
@@ -11450,13 +11458,15 @@ body {
 }
 .sb-sidenav .sb-sidenav-menu {
   flex-grow: 1;
-  background-color: orange;
+  background-color: white;
+  box-shadow: 7px -3px 4px -5px rgba(0,0,0,0.1);
 }
 .sb-sidenav .sb-sidenav-menu .nav {
   flex-direction: column;
   flex-wrap: nowrap;
 }
 .sb-sidenav .sb-sidenav-menu .nav .sb-sidenav-menu-heading {
+  color: #303030;
   padding: 1.75rem 1rem 0.75rem;
   font-size: 0.75rem;
   font-weight: bold;
@@ -11468,7 +11478,7 @@ body {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   position: relative;
-  color: lightyellow;
+  color: #3d3d3d;
   font-family: cursive;
 }
 .sb-sidenav .sb-sidenav-menu .nav .nav-link .sb-nav-link-icon {
@@ -11508,7 +11518,7 @@ body {
   color: rgba(255, 255, 255, 0.25);
 }
 .sb-sidenav-dark .sb-sidenav-menu .nav-link:hover {
-  color: #fff;
+  color: #000;
 }
 .sb-sidenav-dark .sb-sidenav-menu .nav-link.active {
   color: #fff;
@@ -11517,7 +11527,8 @@ body {
   color: #fff;
 }
 .sb-sidenav-dark .sb-sidenav-footer {
-  background-color: orangered;
+  background-color: #ffd867;
+  box-shadow: 7px -3px 4px -5px rgba(0,0,0,0.1);
 }
 
 .sb-sidenav-light {

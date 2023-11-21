@@ -4,12 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Usuario;
+use App\Models\Role;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 
 use App\Http\Requests\UsuarioFormRequest;
 
 class UsuarioController extends Controller
 {
+    public $SelectRol;
     /**
      * Display a listing of the resource.
      *
@@ -23,9 +26,16 @@ class UsuarioController extends Controller
 
     public function index()
         {
-            $usuario=Usuario::orderBy('id','ASC')->paginate(10);
+            //$usuario=Usuario::orderBy('id','ASC')->paginate(10);
+            $usuario = DB::table('usuarios as us')
+    ->select('us.id', 'us.documento_identidad', 'us.nombres', 'us.apellidos', 'us.correo', 'us.telefono', 'rl.name as rol_name')
+    ->join('roles as rl', 'us.idRol', '=', 'rl.id')
+    ->orderBy('id','ASC')->paginate(10);
 
-            return view('usuario.index',compact('usuario'));
+            $roles=Role::orderBy('id','ASC')->get();
+            
+
+            return view('usuario.index',['usuario' => $usuario, 'roles' => $roles]);
         }        
     
     /**
@@ -35,8 +45,11 @@ class UsuarioController extends Controller
      */
     public function create(Request $request)
     {
+        
         $request->user()->authorizeRoles('admin');
-        return view ('usuario.create');
+        $roles=Role::orderBy('id','ASC')->get();
+
+        return view ('usuario.create',compact('roles'));
     }
 
     /**
@@ -54,6 +67,7 @@ class UsuarioController extends Controller
         $usuarios->apellidos=$request->get('apellidos');
         $usuarios->correo=$request->get('correo');
         $usuarios->telefono=$request->get('telefono');
+        $usuarios->idRol=$request->get('SelectRol');
         $usuarios->save();
         return Redirect::to('usuario');
     }
@@ -78,7 +92,8 @@ class UsuarioController extends Controller
     public function edit($id)
     {
         $usuario=Usuario::findOrFail($id);
-        return view("usuario.edit",["usuario"=>$usuario]);
+        $roles=Role::orderBy('id','ASC')->get();
+        return view("usuario.edit",["usuario"=>$usuario,"roles" => $roles]);
     }
 
     /**
@@ -96,6 +111,7 @@ class UsuarioController extends Controller
         $usuarios->apellidos=$request->get('apellidos');
         $usuarios->correo=$request->get('correo');
         $usuarios->telefono=$request->get('telefono');
+        $usuarios->idRol=$request->get('SelectRol');
         $usuarios->update();
          return Redirect::to('usuario');
     }
@@ -109,6 +125,7 @@ class UsuarioController extends Controller
     public function destroy($id)
     {
         $usuarios=Usuario::findOrFail($id);
+        //dd($usuarios);
         $usuarios->delete();
         return Redirect::to('usuario');
     }

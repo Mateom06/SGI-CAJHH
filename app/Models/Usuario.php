@@ -10,6 +10,6 @@ class usuario extends Model
     use HasFactory;
     public $timestamps = false;
     protected $table = 'usuarios';
-    protected $fillable = ['documento_identidad','nombres','apellidos','correo','telefono']; 
+    protected $fillable = ['documento_identidad','nombres','apellidos','idRol','correo','telefono']; 
      
 }

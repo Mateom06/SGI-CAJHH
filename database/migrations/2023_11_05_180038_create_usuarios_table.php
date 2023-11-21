@@ -16,6 +16,8 @@ return new class extends Migration
         Schema::create('usuarios', function (Blueprint $table) {
             $table->id();
             $table->string('documento_identidad');
+            $table->unsignedBigInteger('idRol');
+                $table->foreing('idRol')>references('id')->on('rol');
             $table->string('nombres');
             $table->string('apellidos');
             $table->string('correo');

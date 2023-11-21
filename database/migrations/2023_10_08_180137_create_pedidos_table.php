@@ -15,7 +15,8 @@ return new class extends Migration
 
         Schema::create('pedidos', function (Blueprint $table) {
             $table->id();
-
+            $table->unsignedBigInteger('idProveedor');
+                $table->foreing('idProveedor')>references('id')->on('proveedor');
             $table->string('Descripcion');
             $table->string('fechaPedido');
             $table->string('fechaEntrega');

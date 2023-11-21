@@ -27,13 +27,15 @@ Route::get('/', function () {
 });
 Route::get('/empleado/create',[EmpleadoController::class,'create']);
 */
-Route::resource('empleado',EmpleadoController::class);
+
 Route::resource('sede',SedeController::class);
 Route::resource('pedido',PedidoController::class);
 Route::resource('inventario', 'App\Http\Controllers\InventarioController');
 Route::resource('usuario', 'App\Http\Controllers\UsuarioController');
 Route::get('imprimirpedidos','App\http\Controllers\PdfController@imprimirpedidos')->name('imprimirpedidos');
 Route::get('imprimirsedes','App\http\Controllers\PdfController@imprimirsedes')->name('imprimirsedes');
+Route::get('imprimirinventarios','App\http\Controllers\PdfController@imprimirinventarios')->name('imprimirinventarios');
+Route::get('imprimirusuarios','App\http\Controllers\PdfController@imprimirusuarios')->name('imprimirusuarios');
 
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 Auth::routes();

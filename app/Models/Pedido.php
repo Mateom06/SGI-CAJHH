@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Pedido extends Model
 {
     use HasFactory;
+    public $timestamps = false;
+    protected $table = 'pedidos';
+    protected $fillable = ['idProveedor','descripcion','fechaPedido','fechaEntrega','comentarios'];
 }

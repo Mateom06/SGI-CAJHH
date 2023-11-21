@@ -48,6 +48,17 @@ class="form-control"
 
         value="{{$usuario->telefono}}">
     </div>
+    <div class="col-lg-4 col-md-9 col-sm-6 col-xs-12">
+        <div class="form-group">
+            <label for="SelectRol">Rol a Asignar</label>
+            <select name="SelectRol" id="SelectRol" class="form-control">
+                <option value="{{ $usuario->idRol }}" selected>== Selecciona un rol ==</option>
+                @foreach ($roles as $rol)
+                <option value="{{ $rol->id }}">{{ $rol->name }}</option>
+                @endforeach
+            </select>
+        </div>
+    </div>
     <div class="col-12">
 
         <button class="btn btn-primary" type="submit"><span class="glyphicon glyphiconrefresh"></span> Actualizar</button>
