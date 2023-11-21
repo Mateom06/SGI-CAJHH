@@ -9,6 +9,7 @@
     <a href="{{url('imprimirpedidos')}}" class="pull-right">
         <button class="btn btn-success"><i class="fas fa-file-pdf"></i> Imprimir Pdf</button> </a>
     </div></div>
+    <p>Estás en gestion de pedidos</p>
     <div class="row">
     <div class="table-responsive">
     <table class="table table-striped table-hover">
@@ -31,10 +32,11 @@
     <td>{{ $ped->Comentarios }}</td>
     
     <td>
-        <a href="{{URL::action('App\Http\Controllers\PedidoController@edit',$ped->id)}}"><button class="btn btn-primary">Actualizar</button></a>
-    <a href="" data-bs-toggle="modal" data-bs-target="#modal-delete-{{$ped->id}}">
-        <button type="button" class="btn btn-danger"> Eliminar</button> 
-       </a>
+        <a href="{{URL::action('App\Http\Controllers\PedidoController@edit',$ped->id)}}" class="edit" title="Edit" data-toggle="tooltip"> <i class="material-icons">&#xE254;</i></a>
+        
+        <a href="" data-bs-toggle="modal" data-bs-target="#modal-delete-{{$ped->id}}" class="delete" title="Delete" data-toggle="tooltip">
+            <i class="material-icons">&#xE872;</i>
+        </a>
     </td>
     </tr>
     @include('pedido.modal')

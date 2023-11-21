@@ -5,7 +5,10 @@
     <div class="col-md-9">
         <a href="{{url('inventario/create')}}" class="pull-right">
             <button class="btn btn-success">Agregar activo</button> </a>
+            <a href="{{url('imprimirinventarios')}}" class="pull-right">
+                <button class="btn btn-success"><i class="fas fa-file-pdf"></i> Imprimir Pdf</button> </a>
 </div></div>
+<p>Estás en gestion de inventario</p>
  <div class="row">
         <div class="table-responsive">
     <table class="table table-striped table-hover">
@@ -30,13 +33,13 @@
         <td>{{ $inven->fechaAdquisicion }}</td>
         <td>{{ $inven->fechaSalida }}</td>
         <td>
-
-        <a href="{{URL::action('App\Http\Controllers\InventarioController@edit',$inven->id)}}">
-            <button class="btn btn-primary">Actualizar</button></a>
+        <a href="{{URL::action('App\Http\Controllers\InventarioController@edit',$inven->id)}}" class="edit" title="Edit" data-toggle="tooltip"> <i class="material-icons">&#xE254;</i></a>
         
-        <a href="" data-bs-toggle="modal" data-bs-target="#modal-delete-{{$inven->id}}">
-            <button type="button" class="btn btn-danger"> Eliminar</button></a>
+        <a href="" data-bs-toggle="modal" data-bs-target="#modal-delete-{{$inven->id}}" class="delete" title="Delete" data-toggle="tooltip">
+            <i class="material-icons">&#xE872;</i>
+        </a>
         </td>
+        
     </tr>
     @include('inventario.modal')
 

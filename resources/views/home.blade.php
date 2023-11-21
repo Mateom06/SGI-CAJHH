@@ -3,8 +3,8 @@
 @section('contenido')
     <!-- Aquí va el contenido específico de la página de inicio -->
     <div class="nueva-seccion">
-    <h1>Colegio Ana Julia Holguin</h1>
-        <h2>Bienvenido al Gestor de Inventario</h2>
+    <h1>Bienvenido al Gestor de Inventario</h1>
+        
         
 
         <!-- Agrega aquí el contenido adicional específico de la página de inicio -->

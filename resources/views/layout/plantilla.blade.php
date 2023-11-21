@@ -10,8 +10,9 @@
     <title>PROYECTO SGI_CAJHH</title>
 
     <link href="{{ asset('css/styles.css')}}" rel="stylesheet" />
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    
 </head>
 
 <body>
@@ -20,7 +21,8 @@
         <a class="navbar-brand ps-3" href="index.html">Gestor de Inventario</a>
         <!-- Sidebar Toggle-->
         <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
-                class="fas fa-bars"></i></button>
+                class="fas fa-bars"></i></button>&nbsp
+                
         <!-- Navbar Search-->
         <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
             <div class="input-group">
@@ -70,8 +72,7 @@
 
                                 <i class="fas fa-tachometer-alt"></i>
                             </div>
-                            Inicio
-
+                            INICIO
 
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
                                 data-bs-target="#collapseUser" aria-expanded="false" aria-controls="collapseLayouts">
@@ -104,21 +105,6 @@
 
 
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
-                                data-bs-target="#collapseProducts" aria-expanded="false" aria-controls="collapseLayouts">
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Gestion de Productos
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            <div class="collapse" id="collapseProducts" aria-labelledby="headingOne"
-                                data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="{{url('producto')}}"><i class="fas fa-outdent"></i>&nbsp&nbsp Listado Productos</a>
-
-                                </nav>
-                            </div>
-
-
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
                                 data-bs-target="#collapseOrders" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-shopping-cart"></i></div>
                                 Gestion de Pedidos
@@ -131,22 +117,6 @@
 
                                 </nav>
                             </div>
-
-
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
-                                data-bs-target="#collapseSuppliers" aria-expanded="false" aria-controls="collapseLayouts">
-                                <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
-                                Gestion de Proveedores
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            <div class="collapse" id="collapseSuppliers" aria-labelledby="headingOne"
-                                data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="{{url('proveedor')}}"><i class="fas fa-universal-access"></i>&nbsp&nbsp&nbsp Listado Proveedores</a>
-
-                                </nav>
-                            </div>
-
 
 
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
@@ -168,19 +138,15 @@
                     </div>
                 </div>
                 <div class="sb-sidenav-footer">
-                    <div class="small">Logged in as:</div>
-                    Start Bootstrap
+                <img src="{{ asset('img/logo1.jpeg') }}" style="width:95%;height:auto;text-align: center;"> 
                 </div>
             </nav>
         </div>
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
-                    <h1 class="mt-4">Mira eso ve ve... Ando activo</h1>
-                    <ol class="breadcrumb mb-4">
-                        <li class="breadcrumb-item"><a href="index.html">Estructura</a></li>
-
-                    </ol>
+                    <h1 class="mt-4"><h1>Colegio Ana Julia Holguin De Hurtado</h1></h1>
+                    
                     <div class="card mb-4">
                         <div class="card-body">
                             <!--Contenido Dinamico-->
@@ -196,7 +162,7 @@
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid px-4">
                     <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; Your Website 2022</div>
+                        <div class="text-muted">Developers Unicamacho</div>
                         <div>
                             <a href="#">Privacy Policy</a>
                             &middot;

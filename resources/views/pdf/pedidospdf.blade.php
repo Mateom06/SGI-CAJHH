@@ -15,10 +15,11 @@ href="{{public_path('dist/css/adminlte.min.css')}}">
         <div class="container">
         <div class="row">
         <div class="col">
-        <img src="{{public_path('img/logo.jpg')}}" alt="" width='90px'>
+        <img src="{{public_path('img/logo1.jpeg')}}" alt="" width='90px'>
         </div>
         <div class="col-md-12 col-xs-12">
-         <h4 class="text-center">Institución Universitaria Antonio Jose</h4>
+         <h4 class="text-center">Colegio Ana Julia Holguin de Hurtado</h4>
+         <h2 class="text-center">Pedidos</h2>
         </div>
         
     <div class="row">
